@@ -1,0 +1,21 @@
+.app-container {
+  width: 70%;
+  margin: auto;
+  font-family: Lato;
+}
+
+.example-button-row {
+  display: flex;
+  align-items: center;
+  justify-content: space-around;
+}
+
+.example-button-row button,
+.example-button-row a {
+  margin-right: 8px;
+}
+
+.example-header-image {
+  background-image: url('https://www.bing.com/th?id=OIP.RlDfNIo3DOeaJ08ncrdukwHaHa&pid=Api');
+  background-size: cover;
+}
