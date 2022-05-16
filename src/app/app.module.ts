@@ -11,6 +11,9 @@ import { BrowserAnimationsModule } from '@angular/platform-browser/animations';
 import { HttpClientModule } from '@angular/common/http';
 import { FormsModule, ReactiveFormsModule } from '@angular/forms';
 import { MatNativeDateModule } from '@angular/material';
+import { MyFormComponent } from './my-form/my-form.component';
+import { CommonModalComponent } from './common-modal/common-modal.component';
+import { CommonInputComponent } from './common-input/common-input.component';
 
 @NgModule({
   imports: [
@@ -22,7 +25,19 @@ import { MatNativeDateModule } from '@angular/material';
     MatNativeDateModule,
     ReactiveFormsModule,
   ],
-  declarations: [AppComponent],
+  //exports: [MyFormComponent, CommonModalComponent, CommonInputComponent],
+
+  entryComponents: [
+    MyFormComponent,
+    CommonModalComponent,
+    CommonInputComponent,
+  ],
+  declarations: [
+    AppComponent,
+    MyFormComponent,
+    CommonModalComponent,
+    CommonInputComponent,
+  ],
   bootstrap: [AppComponent],
 })
 export class AppModule {}
