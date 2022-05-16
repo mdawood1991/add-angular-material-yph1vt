@@ -8,7 +8,7 @@ import { MyFormComponent } from './my-form/my-form.component';
   selector: 'my-app',
   template: `
     <div class="app-container">
-      <button mat-button (click)="launch()">Launch!</button>
+      <button mat-raised-button color="primary" (click)="launch()">Launch Modal with form!</button>
     </div>
   `,
   styleUrls: ['./app.component.css'],
