@@ -1,5 +1,5 @@
-<app-flt-modal [modalConfig]="modalConfig" [formModal]="formModal">
-  <div [formGroup]="formModal">
+<app-common-modal [modalConfig]="modalConfig" [formModal]="formModal">
+  <!-- <div [formGroup]="formModal">
     <app-flt-text-input
       formControlName="name"
       [fieldInfo]="{ label: 'name', name: 'name', type: 'text' }"
@@ -16,8 +16,8 @@
           *ngIf="(formModal.get('name').dirty || formModal.get('name').touched) && formModal.get('name').errors?.['required']"
           >Name is required.</mat-error
         >
-        <!-- ngControl.invalid && (ngControl.dirty || ngControl.touched) && -->
+
       </mat-form-field>
     </div>
-  </div>
-</app-flt-modal>
+  </div> -->
+</app-common-modal>
