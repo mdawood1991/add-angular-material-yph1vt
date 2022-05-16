@@ -1,0 +1,16 @@
+<h3 mat-dialog-title>{{ modalConfig.title }}</h3>
+
+<mat-dialog-content>
+  <form>
+    <ng-content></ng-content>
+  </form>
+
+  <pre>{{ formModal.value | json }}</pre>
+</mat-dialog-content>
+
+<mat-dialog-actions align="end">
+  <button mat-raised-button color="primary" cdkFocusInitial (click)="onSave()">
+    Save
+  </button>
+  <button mat-button mat-dialog-close>Cancel</button>
+</mat-dialog-actions>

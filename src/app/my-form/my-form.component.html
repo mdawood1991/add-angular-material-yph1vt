@@ -1,0 +1,23 @@
+<app-flt-modal [modalConfig]="modalConfig" [formModal]="formModal">
+  <div [formGroup]="formModal">
+    <app-flt-text-input
+      formControlName="name"
+      [fieldInfo]="{ label: 'name', name: 'name', type: 'text' }"
+    ></app-flt-text-input>
+
+    <div class="form-group">
+      <mat-form-field appearance="fill" hintLabel="Max 10 characters">
+        <mat-label> Name TOO MUCH HTML! </mat-label>
+        <input matInput type="text" formControlName="name" />
+
+        <mat-hint align="end">the/10</mat-hint>
+
+        <mat-error
+          *ngIf="(formModal.get('name').dirty || formModal.get('name').touched) && formModal.get('name').errors?.['required']"
+          >Name is required.</mat-error
+        >
+        <!-- ngControl.invalid && (ngControl.dirty || ngControl.touched) && -->
+      </mat-form-field>
+    </div>
+  </div>
+</app-flt-modal>

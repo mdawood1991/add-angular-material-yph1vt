@@ -1,0 +1,21 @@
+<div class="form-group">
+  <mat-form-field appearance="fill" hintLabel="Max 10 characters">
+    <mat-label>{{ fieldInfo.label }}</mat-label>
+    <input
+      matInput
+      [type]="fieldInfo.type"
+      [placeholder]="fieldInfo.placeholder"
+      [value]="value"
+      (input)="onChange($event.target.value)"
+      (blur)="onTouched()"
+    />
+
+    <mat-hint align="end">{{ ngControl.value?.length || 0 }}/10</mat-hint>
+
+    <mat-error
+      *ngIf="(ngControl.dirty || ngControl.touched) && ngControl.errors?.['required']"
+      >Name is required.</mat-error
+    >
+    <!-- ngControl.invalid && (ngControl.dirty || ngControl.touched) && -->
+  </mat-form-field>
+</div>
