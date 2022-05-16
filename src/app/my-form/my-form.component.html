@@ -7,18 +7,19 @@
 
     <div class="form-group">
       <mat-form-field appearance="fill" hintLabel="Max 10 characters">
-        <mat-label> Name Works </mat-label>
-        <input matInput type="text" formControlName="name" />
+        <mat-label> Name Old (works) </mat-label>
+        <input matInput type="text" formControlName="nameOld" />
 
         <mat-hint align="end">the/10</mat-hint>
 
         <mat-error
           *ngIf="
-            (formModal.get('name').dirty || formModal.get('name').touched) &&
-            formModal.get('name').errors &&
-            formModal.get('name').errors['required']
+            (formModal.get('nameOld').dirty ||
+              formModal.get('nameOld').touched) &&
+            formModal.get('nameOld').errors &&
+            formModal.get('nameOld').errors['required']
           "
-          >Name is required.</mat-error
+          >Name Old is required.</mat-error
         >
       </mat-form-field>
     </div>

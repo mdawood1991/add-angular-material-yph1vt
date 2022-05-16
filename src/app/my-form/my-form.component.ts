@@ -12,6 +12,7 @@ export class MyFormComponent implements OnInit {
 
   formModal: FormGroup = this.formBuilder.group({
     name: this.formBuilder.control(null, [Validators.required]),
+    nameOld: this.formBuilder.control(null, [Validators.required]),
   });
   modalConfig: IModalConfig;
 

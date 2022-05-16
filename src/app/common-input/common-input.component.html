@@ -21,4 +21,7 @@
       >Name is required.</mat-error
     >
   </mat-form-field>
+
+  <pre>{{ ngControl.errors | json }}</pre>
+  <pre>{{ { dirty: ngControl.dirty, touched: ngControl.touched } | json }}</pre>
 </div>
