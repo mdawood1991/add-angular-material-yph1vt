@@ -32,7 +32,7 @@ const defaultFieldInfo: IFieldInfo = {
   templateUrl: './common-input.component.html',
   styleUrls: ['./common-input.component.css'],
 })
-export class CommonInputComponent implements OnInit {
+export class CommonInputComponent implements OnInit, ControlValueAccessor {
   @Input() fieldInfo: IFieldInfo;
 
   value!: any;
